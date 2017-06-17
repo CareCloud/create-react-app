@@ -1,0 +1,22 @@
+#appHeader {
+  background-color:#083A6D;
+  height:70px;
+  img {
+    margin-left:10px;
+  }
+}  
+
+.app-header-title {
+  text-align: center;
+    h2 {
+      color: #333;
+      display: inline-block;
+      font-size: 1.2em;
+      line-height: 1.2em;
+      text-align: center;
+    }
+    p {
+      font-size:1em;
+      line-height: 1em;
+    }
+}

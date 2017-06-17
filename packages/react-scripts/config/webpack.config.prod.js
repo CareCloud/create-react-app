@@ -22,6 +22,7 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
+const CareCloud = require('./carecloud');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -189,7 +190,9 @@ module.exports = {
         // @remove-on-eject-begin
         options: {
           babelrc: false,
-          presets: [require.resolve('babel-preset-react-app')],
+          presets: [require.resolve('babel-preset-react-app')].concat(
+            CareCloud.webpack.PRESETS
+          ),
         },
         // @remove-on-eject-end
       },

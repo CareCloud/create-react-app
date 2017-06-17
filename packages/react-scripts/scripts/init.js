@@ -21,6 +21,8 @@ const path = require('path');
 const chalk = require('chalk');
 const spawn = require('react-dev-utils/crossSpawn');
 
+const CareCloud = require('../config/carecloud');
+
 module.exports = function(
   appPath,
   appName,
@@ -48,6 +50,9 @@ module.exports = function(
     test: 'react-scripts test --env=jsdom',
     eject: 'react-scripts eject',
   };
+
+  // Custom appPackage script rules
+  appPackage.scripts = CareCloud.packageScripts;
 
   fs.writeFileSync(
     path.join(appPath, 'package.json'),
@@ -145,6 +150,9 @@ module.exports = function(
   } else {
     cdpath = appPath;
   }
+
+  // Create symlinks
+  CareCloud.createAppSymlinks();
 
   // Change displayed command to yarn instead of yarnpkg
   const displayedCommand = useYarn ? 'yarn' : 'npm';

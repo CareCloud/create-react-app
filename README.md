@@ -1,4 +1,9 @@
-# Create React App [![Build Status](https://travis-ci.org/facebookincubator/create-react-app.svg?branch=master)](https://travis-ci.org/facebookincubator/create-react-app)
+# CareCloud Create React App CLI
+
+This is a fork of the Create React App package create by Facebook in order to initialize a new ReactJS application. We have forked this repository in order to add our own customizations.
+
+
+## Create React App [![Build Status](https://travis-ci.org/facebookincubator/create-react-app.svg?branch=master)](https://travis-ci.org/facebookincubator/create-react-app)
 
 Create React apps with no build configuration.
 
