@@ -14,17 +14,13 @@ We want to use the all of the great Create React App features and also add our o
 
 In order to acheive this we will need to add some custom configuration to this package in particular. We can then call this specific react-scripts package on build using the example command below.
 
-### Create a new ReactJS application using our fork
-```
-create-react-app --scripts-version @carecloud/react-scripts my-cool-app
-```
 
 ### How add additional customizations
 
 1. Fork this repository
 ```
 $ cd your-dev-directory
-$ git clone https://github.com/CareCloud/create-react-app
+$ git clone https://github.com/CareCloud/create-react-app react-scripts
 ```
 
 2. Navigate to the react-scripts directory
@@ -39,12 +35,13 @@ This is where the actual work for customizing takes place. It's most likely that
 When you're ready to check if your contribution is working as designed the next thing you need to do is create a new app with the 
 custom script. The `create-react-app` package accepts a `--scripts-version` argument which allows us to define the custom script package we want to use in order to build our new application.
 
+This argument should be an NPM located on a local or remote registry. For local development I recommend you run [Sinopia](https://github.com/rlidwka/sinopia)
+
+
+### Create a new ReactJS application using our custom script
 ```
 create-react-app --scripts-version @carecloud/react-scripts my-cool-app
 ```
-
-This argument should be an NPM located on a local or remote registry. For local development I recommend you run [Sinopia](https://github.com/rlidwka/sinopia)
-
 
 #### Developing Node Packages Locally
 
