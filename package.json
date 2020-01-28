@@ -56,5 +56,8 @@
     "yarn.lock": [
       "git rm --cached"
     ]
+  },
+  "dependencies": {
+    "node-sass": "^4.13.1"
   }
 }
